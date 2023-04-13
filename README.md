@@ -1,1 +1,1 @@
-# paypal-vujs
+# paypal-vuejs
