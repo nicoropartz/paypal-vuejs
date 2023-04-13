@@ -1,0 +1,27 @@
+@import './paper/mixins/vendor-prefixes';
+
+/* navigation action display  */
+
+@keyframes bounce {
+  0%,
+  25%,
+  55%,
+  75%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  45% {
+    transform: translateX(-10px);
+  }
+  65% {
+    transform: translateX(-7px);
+  }
+  85% {
+    transform: translateX(-5px);
+  }
+}
+
+@mixin bounce-animation {
+  animation: bounce 2s ease infinite;
+}

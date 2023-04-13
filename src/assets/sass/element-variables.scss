@@ -1,0 +1,13 @@
+@import './paper/variables';
+/* theme color */
+$--color-primary: $primary-color;
+$--color-success: $success-color;
+$--color-warning: $warning-color;
+$--color-danger: $danger-color;
+$--color-info: $info-color;
+$--color-text-primary: $primary-states-color;
+
+/* icon font path, required */
+$--font-path: '~element-plus/theme-chalk/fonts';
+
+@import 'element-plus/theme-chalk/index.css';
