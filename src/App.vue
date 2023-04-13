@@ -6,8 +6,8 @@ import PaymentList from './components/PaymentList.vue'
 
 <template>
       <div class="app-container">
-        <PaymentList class="payement"/>
-        <Inscription class="inscription"/>
+        <payment-list class="payement"/>
+        <inscription class="inscription"/>
       </div>
 </template>
 
@@ -16,8 +16,6 @@ import { defineComponent, onMounted } from 'vue';
 
 export default defineComponent({
   name: 'App',
-  setup() {
-   }
 });
 </script>
 

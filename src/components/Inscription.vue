@@ -31,6 +31,7 @@ export default defineComponent({
     props: {
     },
     setup() {
+        const { VITE_CLIENT_ID } = import.meta.env; 
         const form = reactive({
             nom: '',
             prenom: ''
@@ -64,7 +65,8 @@ export default defineComponent({
         }
 
         onMounted(async () => {
-            paypal = await loadScript({ "client-id": "AUCeZclDDHI1eYlG1D7tJz9kwNRjKGl-38opM0gZfD_QpEZxB0Z7utOkKaC7kUuPtizDQByVqnOErB9F", components: "buttons,marks,messages", currency: "EUR" });
+
+            paypal = await loadScript({ "client-id": VITE_CLIENT_ID, components: "buttons,marks,messages", currency: "EUR" });
             await paypal.Buttons({
                 createOrder: createOrder,
                 onApprove: onApprove,
