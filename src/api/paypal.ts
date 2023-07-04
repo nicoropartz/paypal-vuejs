@@ -19,7 +19,7 @@ export class PaypalApi {
   };
 
   //@ts-ignore
-  const data = await (await fetch(`https:/${VITE_API_URL}/v1/reporting/transactions?start_date=2023-04-04T23:59:59.999Z&end_date=2023-04-28T00:00:00.000Z&transaction_currency=EUR&fields=transaction_info, payer_info, shipping_info, cart_info, store_info, auction_info, incentive_info`, requestOptions)).json();
+  const data = await (await fetch(`https://${VITE_API_URL}/v1/reporting/transactions?start_date=2023-04-04T23:59:59.999Z&end_date=2023-04-28T00:00:00.000Z&transaction_currency=EUR&fields=transaction_info, payer_info, shipping_info, cart_info, store_info, auction_info, incentive_info`, requestOptions)).json();
   return data;
   }
 

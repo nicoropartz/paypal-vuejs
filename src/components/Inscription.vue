@@ -66,7 +66,7 @@ export default defineComponent({
 
         onMounted(async () => {
 
-            paypal = await loadScript({ "client-id": VITE_CLIENT_ID, components: "buttons,marks,messages", currency: "EUR" });
+            paypal = await loadScript({ "client-id": VITE_CLIENT_ID, "disable-funding": ["credit","card"], components: "buttons,marks,messages", currency: "EUR" });
             await paypal.Buttons({
                 createOrder: createOrder,
                 onApprove: onApprove,
